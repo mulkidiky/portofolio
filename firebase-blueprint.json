@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Comment": {
+      "title": "Comment",
+      "description": "A user-submitted comment on the portfolio.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "The name of the person commenting." },
+        "message": { "type": "string", "description": "The comment content." },
+        "profilePhotoUrl": { "type": "string", "description": "Optional URL to the profile photo." },
+        "createdAt": { "type": "string", "format": "date-time", "description": "When the comment was created." }
+      },
+      "required": ["name", "message", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/comments/{commentId}": {
+      "schema": "Comment",
+      "description": "Collection of public comments."
+    }
+  }
+}
