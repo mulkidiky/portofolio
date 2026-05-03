@@ -1,4 +1,6 @@
 import { Project, Certificate, TechItem, SocialLink } from './types';
+import posterImg from './assets/images/regenerated_image_1777745607881.png';
+import brandingImg from './assets/images/regenerated_image_1777745616126.png';
 
 export const PROJECTS: Project[] = [
   {
@@ -11,7 +13,7 @@ export const PROJECTS: Project[] = [
       'Komposisi tipografi modern',
       'Color grading yang profesional'
     ],
-    image: '/src/assets/images/regenerated_image_1777745607881.png',
+    image: posterImg,
     liveUrl: '#',
     githubUrl: '#'
   },
@@ -25,7 +27,7 @@ export const PROJECTS: Project[] = [
       'Konsistensi elemen visual',
       'Desain yang timeless'
     ],
-    image: '/src/assets/images/regenerated_image_1777745616126.png',
+    image: brandingImg,
     liveUrl: '#',
     githubUrl: '#'
   },
@@ -51,21 +53,21 @@ export const CERTIFICATES: Certificate[] = [
     title: 'Pelatihan Videography BLKK',
     issuer: "PP Salafiyah Syafi'iyah Sukorejo",
     date: '2025',
-    image: 'sertifikat pelatihan videography.jpg'
+    image: `${import.meta.env.BASE_URL}sertifikat pelatihan videography.jpg`
   },
   {
     id: 'cert2',
     title: 'Juara 3 Desain Poster',
     issuer: 'Insitut Agama Islam Pemalang',
     date: '2025',
-    image: 'sertifikat insip desain juara 3.jpg'
+    image: `${import.meta.env.BASE_URL}sertifikat insip desain juara 3.jpg`
   },
   {
     id: 'cert3',
     title: 'Juara 2 Video Reels Instagram',
     issuer: 'PWNU Jawa Timur',
     date: '2026',
-    image: 'juara 2 video reels Instagram PWNU Jatim.jpg'
+    image: `${import.meta.env.BASE_URL}juara 2 video reels Instagram PWNU Jatim.jpg`
   }
 ];
 

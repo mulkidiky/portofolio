@@ -67,7 +67,7 @@ export default function About() {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full blur opacity-50 group-hover:opacity-100 transition duration-1000"></div>
               <img
-                src="/foto-diky.jpg.png"
+                src={`${import.meta.env.BASE_URL}foto-diky.jpg.png`}
                 alt="Profile"
                 className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-[#030014]"
                 referrerPolicy="no-referrer"

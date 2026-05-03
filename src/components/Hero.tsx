@@ -64,7 +64,7 @@ export default function Hero() {
            className="relative flex justify-center"
         >
           <img 
-            src="/foto-diky.jpg.png" 
+            src={`${import.meta.env.BASE_URL}foto-diky.jpg.png`} 
             alt="Diky Profile" 
             className="w-full max-w-md drop-shadow-[0_0_50px_rgba(109,40,217,0.3)] rounded-3xl object-cover aspect-[4/5]"
             referrerPolicy="no-referrer"
