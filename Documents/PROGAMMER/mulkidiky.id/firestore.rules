@@ -1,0 +1,43 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Global Safety Net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Common Helpers
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // Comment Helpers
+    function isValidComment(data) {
+      return data.keys().hasAll(['name', 'message', 'createdAt']) &&
+             data.keys().size() >= 3 && data.keys().size() <= 4 &&
+             data.name is string && data.name.size() > 0 && data.name.size() <= 100 &&
+             data.message is string && data.message.size() > 0 && data.message.size() <= 1000 &&
+             data.createdAt == request.time &&
+             (data.keys().hasAny(['profilePhotoUrl']) == false || (data.profilePhotoUrl is string && data.profilePhotoUrl.size() <= 1048576)); // Limit base64 or URL size
+    }
+
+    match /comments/{commentId} {
+      allow list: if true; // Publicly readable
+      allow get: if isValidId(commentId);
+      allow create: if isValidId(commentId) && isValidComment(incoming());
+      // No updates or deletes for public comments for now
+    }
+  }
+}
