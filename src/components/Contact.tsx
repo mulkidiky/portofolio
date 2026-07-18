@@ -135,17 +135,17 @@ export default function Contact() {
             <div className="glass p-8 rounded-3xl">
               <h3 className="text-xl font-bold mb-6">Connect With Me</h3>
               <div className="space-y-4">
-                {SOCIAL_LINKS.map(social => (
-                   <a 
-                     key={social.name} 
-                     href={social.name === 'Instagram' ? 'https://www.instagram.com/mulkidiky/' : social.url} 
-                     target="_blank"
-                     rel="noopener noreferrer"
-                     className="flex items-center justify-between p-4 glass rounded-xl hover:bg-white/5 transition-colors group"
-                   >
-                      <span className="font-bold">{social.name}</span>
-                      <Send className="w-4 h-4 text-white/30 group-hover:text-brand-accent group-hover:translate-x-1 transition-all" />
-                   </a>
+                {SOCIAL_LINKS.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between p-4 glass rounded-xl hover:bg-white/5 transition-colors group"
+                  >
+                    <span className="font-bold">{social.name}</span>
+                    <Send className="w-4 h-4 text-white/30 group-hover:text-brand-accent group-hover:translate-x-1 transition-all" />
+                  </a>
                 ))}
               </div>
             </div>

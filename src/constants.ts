@@ -1,6 +1,4 @@
 import { Project, Certificate, TechItem, SocialLink } from './types';
-import posterImg from './assets/images/regenerated_image_1777745607881.png';
-import brandingImg from './assets/images/regenerated_image_1777745616126.png';
 
 export const PROJECTS: Project[] = [
   {
@@ -13,7 +11,7 @@ export const PROJECTS: Project[] = [
       'Komposisi tipografi modern',
       'Color grading yang profesional'
     ],
-    image: posterImg,
+    image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=800&h=600',
     liveUrl: '#',
     githubUrl: '#'
   },
@@ -27,7 +25,7 @@ export const PROJECTS: Project[] = [
       'Konsistensi elemen visual',
       'Desain yang timeless'
     ],
-    image: brandingImg,
+    image: 'regenerated_image_1777745616126.png',
     liveUrl: '#',
     githubUrl: '#'
   },
