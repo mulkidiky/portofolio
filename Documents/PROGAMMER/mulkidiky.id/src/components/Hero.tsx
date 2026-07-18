@@ -2,6 +2,8 @@ import { motion } from 'motion/react';
 import { Rocket, Send, Github, Linkedin, Mail } from 'lucide-react';
 
 export default function Hero() {
+  const heroImage = `${import.meta.env.BASE_URL}foto-diky.jpg.png`;
+
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Decor */}
@@ -64,7 +66,7 @@ export default function Hero() {
           className="relative flex justify-center"
         >
           <img
-            src="/foto-diky.jpg.png"
+            src={heroImage}
             alt="Hero Illustration"
             className="w-full max-w-md drop-shadow-[0_0_50px_rgba(109,40,217,0.3)] rounded-3xl"
             referrerPolicy="no-referrer"

@@ -8,6 +8,8 @@ const STATS = [
 ];
 
 export default function About() {
+  const profileImage = `${import.meta.env.BASE_URL}foto-diky.jpg.png`;
+
   return (
     <section id="about" className="py-24 bg-grid">
       <div className="max-w-7xl mx-auto px-6">
@@ -63,7 +65,7 @@ export default function About() {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full blur opacity-50 group-hover:opacity-100 transition duration-1000"></div>
               <img
-                src="/foto-diky.jpg.png"
+                src={profileImage}
                 alt="Profile"
                 className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-[#030014]"
                 referrerPolicy="no-referrer"
