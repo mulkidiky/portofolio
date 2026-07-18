@@ -5,9 +5,14 @@ import {defineConfig, loadEnv} from 'vite';
 
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
+<<<<<<< HEAD
+  return {
+    base: '/portofolio/',
+=======
   const repoName = 'portofolio';
   return {
     base: process.env.GITHUB_ACTIONS ? `/portofolio/` : '/',
+>>>>>>> 9df8b8e (fix: configure Vite and GitHub Pages deployment)
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),

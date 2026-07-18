@@ -22,6 +22,14 @@ export interface TechItem {
   icon: string;
 }
 
+<<<<<<< HEAD
+export interface SocialLink {
+  name: string;
+  url: string;
+}
+
+=======
+>>>>>>> 9df8b8e (fix: configure Vite and GitHub Pages deployment)
 export interface Comment {
   id: string;
   name: string;
@@ -29,8 +37,11 @@ export interface Comment {
   profilePhotoUrl?: string;
   createdAt: any;
 }
+<<<<<<< HEAD
+=======
 
 export interface SocialLink {
   name: string;
   url: string;
 }
+>>>>>>> 9df8b8e (fix: configure Vite and GitHub Pages deployment)
